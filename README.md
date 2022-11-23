@@ -1,8 +1,8 @@
-# FireBlog App
+# Movie App
 
 ## Description
 
-It is a blog web page created using router, redux toolkit and firebase.
+It is a movie app created using router, redux toolkit and firebase.
 
 ## Tools used in the project
 
@@ -28,36 +28,37 @@ It is a blog web page created using router, redux toolkit and firebase.
   - useState
   - useEffect
   - Link
+  - Redux Toolkit
 
 - Firebase
   - Authentication
-  - Realtime Database
 
 <!-- ## Github-pages -->
 
 ## Pages
 
-[ Project Website ](https://tangerine-naiad-3f53d2.netlify.app)
+[ Project Website ](https://magnificent-pie-5436ff.netlify.app/)
 
 ## Preview
 
-![ Project Snapshot ](fireblogapp.gif)
+![ Project Snapshot ](movieapp.gif)
 
 ## Project Skeleton
 
 ```
-Blog Web Page (folder)
+Movie app (folder)
 |
 ├── public
-|     ├── images
+|     ├── image
 │     └── index.html
 |
 ├── src
 │    ├── app
 |    │       |
 |    |       ├── features
-|    │       |     ├── LoginSlice.jsx
-|    │       |     └── ModalSlice.jsx
+|    |       |     ├── LoginSlice.jsx
+|    │       |     ├── homeSlice.jsx
+|    │       |     └── pagesSlice.jsx
 |    |       |
 |    │       |
 |    │       └── store.jsx
@@ -67,74 +68,44 @@ Blog Web Page (folder)
 |    |       ├── Card
 |    │       |     ├── Card.jsx
 |    │       |     └── Card-styled.jsx
-|    |       |
-|    |       ├── Comment
-|    |       |     ├── Comment-func
-|    |       |     |      ├── CommentDelete.js
-|    │       |     |      └── CommentEdit.js
-|    |       |     |
-|    │       |     ├── Comment.jsx
-|    │       |     └── Comment-styled.jsx
-|    │       |
-|    |       ├── DeleteModal
-|    |       |     ├──  DeleteBlogfunc
-|    │       |     |      └── DeleteBlog.js
-|    |       |     |
-|    │       |     ├── DeleteModal.jsx
-|    │       |     └── DeleteModal-styled.jsx
-|    │       |
-|    |       ├── Modal
-|    │       |     ├── Modal.jsx
-|    │       |     └── Modal-styled.jsx
 |    │       |
 |    │       └── Navbar
 |    │             ├── Navbar.jsx
 |    │             └── navbar-styled.jsx
 |    │
-|    ├── helpers
+|    ├── data
 |    │
 |    ├── private
-|    │       └── RouterPrivate.jsx
+|    |       ├── forgutfirebase.jsx
+|    |       ├── loginfirebase.jsx
+|    |       ├── logingoogle.jsx
+|    │       └── registerfirebase.jsx
+|    │
+|    ├── private
+|    │       └── PrivateRouter.jsx
 |    │
 |    ├── pages
 |    │       |
-|    │       ├── About
-|    │       |     ├── About.jsx
-|    │       |     └── About-styled.jsx
+|    │       ├── Home
+|    │       |     ├── Home.jsx
+|    │       |     └── Home-styled.jsx
 |    │       |
-|    │       ├── Dashboard
-|    │       |     ├── Dashboard.jsx
-|    │       |     └── Dashboard-styled.jsx
+|    │       ├── Forgot
+|    │       |     └── Forgot.jsx
 |    │       |
 |    │       ├── Details
 |    │       |     ├── Details.jsx
 |    │       |     └── Details-styled.jsx
 |    │       |
-|    │       ├── NewBlog
-|    │       |     ├── NewBlog.jsx
-|    │       |     └── NewBlog-styled.jsx
-|    │       |
-|    │       ├── Profile
-|    |       |     ├── ProfileUpdate
-|    |       |     |       └── ProfileUpdate.js
-|    |       |     |
-|    │       |     ├── Profile.jsx
-|    │       |     └── Profile-styled.jsx
-|    │       |
 |    │       ├── Register
 |    │       |     └── Register.jsx
 |    |       |
-|    |       ├── Login
-|    │       |     ├── login-styled.jsx
-|    │       |     └── Login.jsx
-|    |       |
-|    │       └── UpdateBlog
-|    |             ├── UpdateBlogFunc
-|    |             |       └── UpdateBlogFunc.js
-|    |             |
-|    │             ├── UpdateBlog.jsx
-|    │             └── update-styled.jsx
+|    |       └── Login
+|    │             ├── login-styled.jsx
+|    │             └── Login.jsx
+|    |       
 |    │
+|    ├── firebase.js
 │    ├── App.js
 │    ├── index.css
 │    └── index.js
